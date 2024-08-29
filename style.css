@@ -1,49 +1,84 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(243, 217, 195);
+  min-height: 100vh;
+  background-color: #f4e4ba;
 }
 
-h1 {
+.container {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  min-height: 45vh;
+  width: 50vh;
+}
+
+form {
+  margin: 2rem 0 1rem 0;
+}
+
+form select,
+input,
+button {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.75rem;
+}
+
+form input {
+  border: 1px solid lightgray;
+  height: 3rem;
+  padding-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.dropdown i {
   font-size: 1.5rem;
-}
-main {
-  margin-top: 5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 2rem;
-  border-radius: 8px;
-  background-color: white;
-  width: 25rem;
-  height: 25rem;
-  flex-wrap: wrap;
-}
-#amount {
-  display: flex;
-  flex-direction: column;
-}
-#value {
-  border-color: rgb(231, 229, 229);
-  border-radius: 7px;
-  height: 2rem;
+  margin-top: 1rem;
 }
 
-#countries {
+.select-container img {
+  max-width: 2rem;
+}
+
+.select-container {
   display: flex;
-  flex-direction: row;
-  gap: 10rem;
+  border: 1px solid lightgray;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  padding-left: 0.5rem;
+}
+
+.msg {
+  margin-top: 2rem;
+}
+.btn {
+  height: 3rem;
+  margin-top: 2rem;
+  text-align: center;
+  background-color: #af4d98;
+  color: #fff;
+  font-size: 1.15rem;
+  cursor: pointer;
 }
 
 #from-country,
 #to-country {
-  display: flex;
-  flex-direction: column;
+  cursor: pointer;
 }

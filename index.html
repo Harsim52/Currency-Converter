@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div id="content">
-      <main id="main-content">
-        <div>
-          <h1>Currency Converter</h1>
-        </div>
-        <div id="amount">
-          <label for="value">Enter Amount</label>
+    <div class="container">
+      <h2>Currency Converter</h2>
+
+      <form action="">
+        <div class="amount">
+          <p>Enter Amount</p>
           <input
             type="number"
             name="vaule"
@@ -21,33 +27,36 @@
             aria-label="Enter Amount"
           />
         </div>
-        <div id="countries">
-          <div class="countrystyle"><label for="from-country">From</label>
-          <select name="from-country" id="from-country" class="country">
-            <option value="usd">USD</option>
-            <option value="ind">India</option>
-            <option value="nz">NZ</option>
-            <option value="aus">Aus</option>
-          </select>
+        <div class="dropdown">
+          <div class="from">
+            <p>From</p>
+            <div class="select-container">
+              <img src="https://flagsapi.com/US/flat/64.png" alt="flag" />
+              <select name="from-country" id="from-country" class="country">
+                <option value="usd">USD</option>
+                <option value="inr">INR</option>
+                <option value="nz">NZ</option>
+                <option value="aus">Aus</option>
+              </select>
+            </div>
+          </div>
+          <i id="arrow" class="fa-solid fa-arrow-right-arrow-left"></i>
+          <div class="to">
+            <p>To</p>
+            <div class="select-container">
+              <img src="https://flagsapi.com/IN/flat/64.png" alt="flag" />
+              <select name="to-country" id="to-country" class="country">
+                <option value="usd">USD</option>
+                <option value="inr" selected>INR</option>
+                <option value="nz">NZ</option>
+                <option value="aus">Aus</option>
+              </select>
+            </div>
+          </div>
         </div>
-          <div class="countrystyle"><label for="to-country">To</label>
-          <select name="to-country" id="to-country" class="country">
-            <option value="usd">USD</option>
-            <option value="ind">India</option>
-            <option value="nz">NZ</option>
-            <option value="aus">Aus</option>
-          </select>
-        </div>
-        </div>
-        <div>
-          <p id="country1">1 USD</p>
-          <p>=</p>
-          <p id="country2">80 INR</p>
-        </div>
-        <div>
-          <button id="get-exchange">Get Exchange Rate</button>
-        </div>
-      </main>
+        <div class="msg">1USD = 80INR</div>
+        <button class="btn" id="get-exchange">Get Exchange Rate</button>
+      </form>
     </div>
     <script src="app.js"></script>
   </body>
